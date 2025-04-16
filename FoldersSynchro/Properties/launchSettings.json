@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FoldersSynchro": {
+      "commandName": "Project",
+      "commandLineArgs": "-s C:\\Users\\Użytkownik\\Documents\\VEEAM\\Source -r C:\\Users\\Użytkownik\\Documents\\VEEAM\\Rep -l C:\\Users\\Użytkownik\\Documents\\VEEAM\\logFile1.txt -i 10"
+    }
+  }
+}

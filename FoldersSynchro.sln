@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldersSynchro", "FoldersSynchro\FoldersSynchro.csproj", "{9C8875A5-D493-46DA-9E2D-201812308B15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C8875A5-D493-46DA-9E2D-201812308B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8875A5-D493-46DA-9E2D-201812308B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8875A5-D493-46DA-9E2D-201812308B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8875A5-D493-46DA-9E2D-201812308B15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC8ADD2A-61EC-42A8-A420-67641D2AACA8}
+	EndGlobalSection
+EndGlobal
