@@ -39,7 +39,6 @@ namespace FoldersSynchro
             Parser.Default.ParseArguments<Options>(args)
                   .WithParsed(o =>
                   {
- 
                       if (PathCheck(o.Source, "Source", o.LogFile, false) == "")
                         return;
 
@@ -105,6 +104,7 @@ namespace FoldersSynchro
                   })
                   .WithNotParsed(errors =>
                   {
+
                       Console.WriteLine("Invalid arguments. Use --help to see available options.");
                   });
         }
