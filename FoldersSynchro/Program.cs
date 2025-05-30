@@ -238,25 +238,25 @@ namespace FoldersSynchro
         {
             try
             {
-                string katalog = Directory.GetCurrentDirectory();
-                if (!Directory.Exists(katalog))
+                string directory = Directory.GetCurrentDirectory();
+                if (!Directory.Exists(directory))
                 {
-                    Directory.CreateDirectory(katalog);
+                    Directory.CreateDirectory(directory);
                 }
 
                 using (FileStream fs = File.Create(sourceName))
                 {
-                    byte[] dane = System.Text.Encoding.UTF8.GetBytes("\n");
-                    fs.Write(dane, 0, dane.Length);
+                    byte[] data = System.Text.Encoding.UTF8.GetBytes("\n");
+                    fs.Write(data, 0, data.Length);
                     if (logFile != "")
-                        WriteToLogFile(logFile, $"CREATE - {katalog + "\\" + sourceName}");
-                    return katalog + "\\" + sourceName;
+                        WriteToLogFile(logFile, $"CREATE - {directory + "\\" + sourceName}");
+                    return directory + "\\" + sourceName;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"An ERROR occurred: {ex.Message}");
-                WriteToLogFile(logFile, $"An ERROR occurred: {ex.Message}");    //usun?
+                WriteToLogFile(logFile, $"An ERROR occurred: {ex.Message}");    
                 return ex.Message;
             }
         }
@@ -274,7 +274,7 @@ namespace FoldersSynchro
             catch (Exception ex)
             {
                 Console.WriteLine($"An ERROR occurred: {ex.Message}");
-                WriteToLogFile(logFile, $"An ERROR occurred: {ex.Message}");    //usun?
+                WriteToLogFile(logFile, $"An ERROR occurred: {ex.Message}");    
                 return ex.Message;
             }
         }
@@ -355,10 +355,10 @@ namespace FoldersSynchro
         {
             try
             {
-                string katalogDocelowy = Path.GetDirectoryName(targetPath);
-                if (!Directory.Exists(katalogDocelowy))
+                string targetDirectory = Path.GetDirectoryName(targetPath);
+                if (!Directory.Exists(targetDirectory))
                 {
-                    Directory.CreateDirectory(katalogDocelowy);
+                    Directory.CreateDirectory(targetDirectory);
                 }
 
                 File.Copy(sourcePath, targetPath, overwrite: true);
@@ -381,12 +381,12 @@ namespace FoldersSynchro
                     {
                         byte[] hash = md5.ComputeHash(stream);
 
-                        StringBuilder wynik = new StringBuilder();
+                        StringBuilder result = new StringBuilder();
                         foreach (byte b in hash)
                         {
-                            wynik.Append(b.ToString("x2"));
+                            result.Append(b.ToString("x2"));
                         }
-                        return wynik.ToString();
+                        return result.ToString();
                     }
                 }
             }
